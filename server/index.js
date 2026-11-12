@@ -123,18 +123,16 @@ app.use(errorHandler);
 // Configure Port
 const PORT = process.env.PORT || 5000;
 
-// Start the server (skipped in Vercel serverless environment)
-if (!process.env.VERCEL) {
-  app.listen(
-    PORT,
-    () => {
-      console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold);
-      if (process.env.NODE_ENV !== 'test') {
-        initInventoryCronJob();
-      }
+// Start the server
+app.listen(
+  PORT,
+  () => {
+    console.log(`Server running in ${process.env.NODE_ENV || 'production'} mode on port ${PORT}`.yellow.bold);
+    if (process.env.NODE_ENV !== 'test') {
+      initInventoryCronJob();
     }
-  );
-}
+  }
+);
 
 // Vercel's Express adapter can use the exported application as a handler.
 module.exports = app;
