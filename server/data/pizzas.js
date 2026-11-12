@@ -1,0 +1,48 @@
+const pizzas = [
+  {
+    name: 'Avocado Green Pesto Pizza',
+    description: 'Creamy avocado slices, baby spinach, cold-pressed basil pesto, vegan mozzarella, and chia seeds',
+    base: 'Ancient Grain',
+    sauces: ['Basil Pesto'],
+    cheeses: ['Vegan Mozzarella'],
+    veggies: ['Baby Spinach', 'Avocado'],
+    price: 549,
+    size: 'medium',
+    imageUrl: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    name: 'Keto Cauliflower Garden',
+    description: 'Grain-free cauliflower crust, roasted bell peppers, sun-ripened tomatoes, and fresh garden herbs',
+    base: 'Cauliflower',
+    sauces: ['Organic Tomato'],
+    cheeses: ['Low-Fat Mozzarella'],
+    veggies: ['Bell Peppers', 'Sun-Dried Tomatoes'],
+    price: 599,
+    size: 'medium',
+    imageUrl: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    name: 'Mediterranean Olive & Feta',
+    description: 'Whole wheat crust, kalamata olives, low-fat feta cheese, artichokes, and cold-pressed olive oil',
+    base: 'Whole Wheat',
+    sauces: ['Garlic Herb'],
+    cheeses: ['Feta Cheese'],
+    veggies: ['Kalamata Olives', 'Artichokes'],
+    price: 649,
+    size: 'medium',
+    imageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop&q=80',
+  },
+  {
+    name: 'Artisanal Veggie Snack Bites',
+    description: 'Crisp baked vegetable crust bites topped with roasted zucchini, bell peppers, and herb hummus dip',
+    base: 'Crisp Veggie',
+    sauces: ['Herb Hummus'],
+    cheeses: ['Parmesan'],
+    veggies: ['Zucchini', 'Roasted Peppers'],
+    price: 529,
+    size: 'small',
+    imageUrl: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&auto=format&fit=crop&q=80',
+  },
+];
+
+module.exports = pizzas;

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="50%" stop-color="#16a34a" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+    <linearGradient id="crustGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="cheeseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#dcfce7" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="100%" stop-color="#4ade80" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#052e16" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring Badge -->
+  <circle cx="256" cy="256" r="240" fill="#f0fdf4" stroke="#22c55e" stroke-width="12" filter="url(#dropShadow)" />
+  <circle cx="256" cy="256" r="222" fill="none" stroke="#86efac" stroke-width="3" stroke-dasharray="10 8" />
+
+  <!-- Pizza Slice / Healthy Snacks Shield -->
+  <!-- Crust Arc -->
+  <path d="M 120 180 Q 256 120 392 180 Q 400 190 390 200 L 268 408 Q 256 424 244 408 L 122 200 Q 112 190 120 180 Z" fill="url(#crustGrad)" filter="url(#dropShadow)" />
+  
+  <!-- Healthy Cheese / Pesto Base Fill -->
+  <path d="M 136 194 Q 256 142 376 194 L 256 388 Z" fill="url(#cheeseGrad)" />
+
+  <!-- Pesto / Herb Swirls -->
+  <path d="M 170 205 Q 210 185 240 215 T 320 205" fill="none" stroke="#22c55e" stroke-width="7" stroke-linecap="round" opacity="0.8" />
+  <path d="M 200 250 Q 240 240 270 265" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round" opacity="0.85" />
+  <path d="M 225 310 Q 245 305 260 320" fill="none" stroke="#15803d" stroke-width="5" stroke-linecap="round" opacity="0.85" />
+
+  <!-- Fresh Organic Toppings -->
+  <!-- Avocado / Green Olives -->
+  <circle cx="205" cy="225" r="16" fill="#86efac" stroke="#16a34a" stroke-width="4" />
+  <circle cx="205" cy="225" r="7" fill="#15803d" />
+
+  <circle cx="295" cy="235" r="18" fill="#86efac" stroke="#16a34a" stroke-width="4" />
+  <circle cx="295" cy="235" r="8" fill="#15803d" />
+
+  <circle cx="245" cy="285" r="15" fill="#86efac" stroke="#16a34a" stroke-width="4" />
+  <circle cx="245" cy="285" r="6" fill="#15803d" />
+
+  <!-- Cherry Tomatoes (Healthy antioxidant accent) -->
+  <circle cx="256" cy="195" r="13" fill="#ef4444" stroke="#b91c1c" stroke-width="3" />
+  <circle cx="253" cy="192" r="3" fill="#ffffff" opacity="0.8" />
+
+  <circle cx="310" cy="285" r="12" fill="#ef4444" stroke="#b91c1c" stroke-width="3" />
+  <circle cx="308" cy="283" r="2.5" fill="#ffffff" opacity="0.8" />
+
+  <circle cx="190" cy="280" r="11" fill="#ef4444" stroke="#b91c1c" stroke-width="2.5" />
+  <circle cx="188" cy="278" r="2.5" fill="#ffffff" opacity="0.8" />
+
+  <!-- Organic Leaves Sprouting from Crust -->
+  <g transform="translate(256, 130)">
+    <!-- Main Left Leaf -->
+    <path d="M 0 10 C -40 -15 -50 -55 -25 -80 C 0 -60 10 -30 0 10 Z" fill="url(#leafGrad)" stroke="#166534" stroke-width="3" />
+    <path d="M 0 10 C -15 -25 -20 -50 -25 -80" fill="none" stroke="#86efac" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Right Small Leaf -->
+    <path d="M 0 15 C 30 -5 45 -35 30 -60 C 10 -45 5 -20 0 15 Z" fill="url(#leafGrad)" stroke="#166534" stroke-width="3" />
+    <path d="M 0 15 C 15 -10 20 -35 30 -60" fill="none" stroke="#86efac" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Healthy Snacks Accent Ring (Seeds & Crisp Wheat) -->
+  <g fill="#16a34a" opacity="0.85">
+    <circle cx="120" cy="270" r="4" />
+    <circle cx="105" cy="305" r="5" />
+    <circle cx="130" cy="340" r="4" />
+    <circle cx="392" cy="270" r="4" />
+    <circle cx="407" cy="305" r="5" />
+    <circle cx="382" cy="340" r="4" />
+  </g>
+
+  <!-- Banner text / Brand lettering at bottom -->
+  <g transform="translate(256, 460)">
+    <rect x="-140" y="-36" width="280" height="42" rx="21" fill="url(#bgGrad)" filter="url(#dropShadow)" />
+    <text x="0" y="-8" font-family="'Nunito', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="3">KaDpinozz</text>
+  </g>
+</svg>
