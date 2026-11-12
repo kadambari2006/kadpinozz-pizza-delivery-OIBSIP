@@ -1,46 +1,33 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "services": {
-    "frontend": {
-      "root": "client",
-      "framework": "vite"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
     },
-    "backend": {
-      "root": "server",
-      "entrypoint": "index.js",
-      "framework": "express"
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
-  },
-  "rewrites": [
+  ],
+  "routes": [
     {
-      "source": "/health",
-      "destination": {
-        "service": "backend"
-      }
+      "src": "/api/(.*)",
+      "dest": "/api/index.js"
     },
     {
-      "source": "/api/health",
-      "destination": {
-        "service": "backend"
-      }
+      "src": "/health",
+      "dest": "/api/index.js"
     },
     {
-      "source": "/api",
-      "destination": {
-        "service": "backend"
-      }
+      "handle": "filesystem"
     },
     {
-      "source": "/api/(.*)",
-      "destination": {
-        "service": "backend"
-      }
-    },
-    {
-      "source": "/(.*)",
-      "destination": {
-        "service": "frontend"
-      }
+      "src": "/(.*)",
+      "dest": "/client/$1"
     }
   ]
 }

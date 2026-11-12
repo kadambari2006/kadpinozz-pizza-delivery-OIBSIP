@@ -8,13 +8,14 @@
     "client": "cd client && npm run dev",
     "build": "cd client && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "postinstall": "cd client && npm install && cd .. && cd server && npm install && cd ..",
     "install": "cd client && npm install && cd .. && cd server && npm install && cd ..",
     "data:import": "node server/seeder",
     "data:destroy": "node server/seeder -d"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itxSaaad/pizza-delivery-system-app-mern-OIBSIP.git"
+    "url": "git+https://github.com/kadambari2006/kadpinozz-pizza-delivery-OIBSIP.git"
   },
   "keywords": [
     "nodejs",
@@ -27,17 +28,28 @@
     "oasis-internship",
     "oibsip"
   ],
-  "author": "Muhammad Saad",
+  "author": "KaDpinozz",
   "license": "CC0-1.0",
-  "bugs": {
-    "url": "https://github.com/itxSaaad/pizza-delivery-system-app-mern-OIBSIP/issues"
-  },
-  "homepage": "https://github.com/itxSaaad/pizza-delivery-system-app-mern-OIBSIP#readme",
   "devDependencies": {
-    "concurrently": "^8.2.0"
-  },
-  "dependencies": {
+    "concurrently": "^8.2.0",
     "eslint": "^8.47.0",
     "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongodb-memory-server": "^11.3.0",
+    "mongoose": "^7.4.3",
+    "morgan": "^1.10.0",
+    "node-cron": "^4.6.0",
+    "nodemailer": "^6.9.4",
+    "razorpay": "^2.9.2"
   }
 }
